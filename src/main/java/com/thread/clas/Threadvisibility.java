@@ -2,7 +2,7 @@ package com.thread.clas;
 
 public class Threadvisibility {
     int i = 0;
-    boolean isRunning = true;
+    volatile boolean isRunning = true;
 
     public static void main(String[] args) throws InterruptedException {
         Threadvisibility threadvisibility = new Threadvisibility();
@@ -26,6 +26,7 @@ public class Threadvisibility {
          * （缓存同步协议，保证能够读到，所以不是由于cpu缓存导致的）
          * 可能没有写入
          * 2.指令重排序
+         * JIT的指令重排导致问题
          */
         threadvisibility.isRunning = false;
         System.out.println("shutdown...");
