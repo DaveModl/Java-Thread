@@ -1,4 +1,4 @@
-package com.thread.clas;
+package com.thread.clas.visibility;
 
 public class ThreadVisibility2 {
     private long count = 0;

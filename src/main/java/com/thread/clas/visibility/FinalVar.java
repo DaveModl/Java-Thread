@@ -1,22 +1,21 @@
-package com.thread.clas;
+package com.thread.clas.visibility;
 
-public class FinalVar2 {
+public class FinalVar {
     final int x;
     int y;
-    static FinalVar2 finalVar;
+    static  FinalVar finalVar;
 
     /**
      * 构造版本
      * final保证可见性
-     * y接受final变量的赋值也可保证可见性
      */
-    public FinalVar2(){
+    public FinalVar(){
         x = 3;
-        y = x;
+        y = 4;
     }
 
     static void writer(){
-        finalVar = new FinalVar2();
+        finalVar = new FinalVar();
     }
 
     /**
